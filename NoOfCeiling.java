@@ -9,11 +9,15 @@ class Main {
   }
   // Ceiling is smallest no >= target 
   // Floor is largest no. <= target 
+  
 
   static int ceiling(int[] arr, int target) {
     int start = 0;
     int end = arr.length - 1;
-
+    // If target no. is greater than the greatest no. in array
+    if( target > arr[arr.length -1]){
+      return -1;
+    }
     while (start <= end) {
       int mid = start + (end - start) / 2;
 
